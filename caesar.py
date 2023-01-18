@@ -7,8 +7,8 @@ def encrypt(key,plaintext):
 
 def decrypt(key,ciphertext):
     plaintext=""
-    for c in plaintext:
-        plaintext += chr((ord(char) + 65 - key) % 26 + 65)
+    for c in ciphertext:
+        plaintext += chr((ord(c) + 65 - key) % 26 + 65)
     return plaintext
 
 
