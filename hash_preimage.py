@@ -15,7 +15,7 @@ def hash_preimage(target_string):
     hash_x = hashlib.sha256(x).hexdigest()
     hash_x_bin = bin(int(hash_x, 16))
 
-    while  hash_x_bin[-len_target:] != target_string:
+    while  hash_x_bin[-target_len:] != target_string:
         str_x = ''.join(random.choice(letters) for i in range(10))
         x = str_x.encode('utf-8')
         hash_x = hashlib.sha256(x).hexdigest()
