@@ -1,6 +1,7 @@
 import hashlib
 import os
 import random
+import string
 
 def hash_collision(k):
     if not isinstance(k,int):
