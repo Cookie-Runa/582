@@ -7,7 +7,7 @@ def hash_preimage(target_string):
     if not all( [x in '01' for x in target_string ] ):
         print( "Input should be a string of bits" )
         return
-    
+    nonce = b'\x00'
     target_len = len(target_string)
     letters = string.ascii_letters
     str_x = ''.join(random.choice(letters) for i in range(10))
