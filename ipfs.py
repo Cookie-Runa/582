@@ -20,7 +20,7 @@ def get_from_ipfs(cid,content_type="json"):
     params = (('arg', cid),)
     project_id = "ae3517feada4819223f6"
     project_secret = '4c15fec94e9a620015a96dca3b3d525b3f49765629e949c9cb6e4ef9fdcfbee1'
-    response = requests.post('https://ipfs.infura.io:5001/api/v0/cat', params=params, auth=(project_id, project_secret))
+    response = requests.post('https://gateway.pinata.cloud/ipfs/', params=params, auth=(project_id, project_secret))
     data = json.loads(response.text)
     assert isinstance(data, dict), f"get_from_ipfs should return a dict"
     return data
