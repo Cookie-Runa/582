@@ -11,7 +11,7 @@ def pin_to_ipfs(data):
                              files={'file' : data_str},auth=(project_id, secret))
     return_value = response.text
     cid = json.loads(return_value)['Hash']
-    return 
+    return cid
 
 def get_from_ipfs(cid,content_type="json"):
     assert isinstance(cid,str), f"get_from_ipfs accepts a cid in the form of a string"
