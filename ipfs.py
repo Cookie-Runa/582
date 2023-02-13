@@ -6,7 +6,7 @@ def pin_to_ipfs(data):
     #YOUR CODE HERE
     json_data = json.dumps(data)
     files = {'file':json_data}
-    url = 'https://gateway.pinata.cloud/ipfs/QmRrDHZCj1jkmdY1kiwUod6R9cZqwViCGq1n2jkmQ2W4j9'
+    url = 'https://gateway.pinata.cloud/ipfs/ae3517feada4819223f6'
     project_id = "ae3517feada4819223f6"
     project_secret = '4c15fec94e9a620015a96dca3b3d525b3f49765629e949c9cb6e4ef9fdcfbee1'
     response = requests.post(url, files=files, auth=(project_id, project_secret))
